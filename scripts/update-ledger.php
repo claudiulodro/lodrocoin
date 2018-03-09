@@ -30,7 +30,7 @@ while ( $line = fgets( $file ) ) {
 		throw new Exception( 'Duplicate image' );
 	}
 
-	if ( '** ' . $seed_hash == trim( $line ) ) {
+	if ( '## ' . $seed_hash == trim( $line ) ) {
 		$seed_hash_line = $current_line;
 	}
 
@@ -45,7 +45,7 @@ if ( -1 == $seed_hash_line ) {
 
 // Take ownership.
 $owner_position = $seed_hash_line + 1;
-$owner_line = '*** OWNER: ' . $owner;
+$owner_line = '### OWNER: ' . $owner;
 array_splice( $ledger, $owner_position, 1, [ $owner_line ] );
 
 // Add new line to ledger.
