@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Generate and output one or more seed hashes for Lodrocoin.
+ *
+ * @param $argv[1] (optional) The amount of seed hashes to generate. Default: 1
+ */
+
 function generate_seed_hash() {
 	$hash = '';
 

@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Process and update the ledger for a Lodrocoin transaction.
+ *
+ * @param $argv[1] string Lodrocoin seed hash
+ * @param $argv[2] string Path to image
+ * @param $argv[3] string New Lodrocoin owner
+ */
+
 require 'util.php';
 
 define( 'LEDGER_FILE', 'ledger.md' );

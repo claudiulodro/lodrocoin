@@ -1,2 +1,2 @@
-# lodrocoin-tools
-Scripts for managing the Lodrocoin ledger
+# Lodrocoin Ledger
+The Lodrocoin ledger and scripts to help manage it.
