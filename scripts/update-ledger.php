@@ -61,7 +61,7 @@ $new_line_position = $seed_hash_line + 3;
 $new_line = generate_ledger_line( $ledger[ $new_line_position ], $img, $owner );
 array_splice( $ledger, $new_line_position, 0, [ $new_line ] );
 
-$file_output = implode( "\n\n", $ledger );
+$file_output = implode( "\n\n", array_filter( $ledger ) );
 
 echo $new_line . "\n";
 

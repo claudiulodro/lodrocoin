@@ -52,4 +52,18 @@ function generate_ledger_line( $previous_line, $img, $user ) {
 	return strtoupper( hash( 'ripemd160', $previous_line ) ) . get_image_hash( $img ) . alphanumeric_uppercase( $user );
 }
 
+/**
+ * Generate a seed hash for a Lodrocoin.
+ *
+ * @return string
+ */
+function generate_seed_hash() {
+	$hash = '';
+
+	while ( strlen( $hash ) < 8 ) {
+		$hash .= rand();
+	}
+
+	return substr( $hash, 0, 8 );
+}
 
